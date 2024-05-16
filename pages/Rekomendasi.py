@@ -160,7 +160,7 @@ def rank(skoring) :
 ranking = rank(skoring)
 print("ranking = ", ranking)
 
-test_path_round = 'Eyeglasses Dataset\Round'
+test_path_round = 'Eyeglasses Dataset/Round'
 test_files_round = os.listdir(test_path_round)
 
 test_img_round = []
@@ -169,7 +169,7 @@ for i in test_files_round:
     img_round = os.path.join(test_path_round,i)
     test_img_round.append(img_round)
 
-test_path_square = 'Eyeglasses Dataset\Square'
+test_path_square = 'Eyeglasses Dataset/Square'
 test_files_square = os.listdir(test_path_square)
 
 test_img_square = []
@@ -178,7 +178,7 @@ for i in test_files_square:
     img_square = os.path.join(test_path_square,i)
     test_img_square.append(img_square)
 
-test_path_cateye = 'Eyeglasses Dataset\Cat Eye'
+test_path_cateye = 'Eyeglasses Dataset/Cat Eye'
 test_files_cateye = os.listdir(test_path_cateye)
 
 test_img_cateye = []
@@ -187,7 +187,7 @@ for i in test_files_cateye:
     img_cateye = os.path.join(test_path_cateye,i)
     test_img_cateye.append(img_cateye)
 
-test_path_aviator = 'Eyeglasses Dataset\Aviator'
+test_path_aviator = 'Eyeglasses Dataset/Aviator'
 test_files_aviator = os.listdir(test_path_aviator)
 
 test_img_aviator = []
