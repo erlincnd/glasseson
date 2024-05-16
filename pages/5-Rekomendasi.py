@@ -11,6 +11,7 @@ import numpy as np
 import pickle
 from mtcnn.mtcnn import MTCNN
 
+st.set_page_config(page_title="Glasses On", page_icon="👓")
 st.title("Glasses On")
 st.image('logo glasses-on 2.png', caption=None, width=200, )
 
