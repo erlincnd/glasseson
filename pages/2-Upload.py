@@ -23,4 +23,4 @@ if uploaded_file is not None:
 
     st.session_state['my_image']=uploaded_file
 if st.button("Lanjutkan"):
-    st.switch_page("pages/Identifikasi.py")
+    st.switch_page("pages/3-Identifikasi.py")
