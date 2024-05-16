@@ -28,6 +28,8 @@ with c2:
     st.write ("Penggunaan: ", st.session_state['penggunaan'])
     if st.button("Kembali ke Menu utama"):
        st.switch_page("main.py")
+    if st.button("About"):
+       st.switch_page("pages/5-About.py")
 
 wajah = st.session_state['bentuk']
 jeniskelamin = st.session_state['jeniskelamin']
