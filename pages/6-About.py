@@ -5,6 +5,15 @@ st.image('logo glasses-on 2.png', caption=None, width=300, )
 
 st.write ("Website ini merupakan sistem yang dibuat untuk menyelesaikan tugas akhir pendidikan S-1 Ilmu Komputer di Universitas Sumatera Utara.")
 st.write ("dengan judul : ")
+
+g1,g2,g3 = st.columns(3)
+with g1:
+    st.write (" ")
+with g2:
+    st.image("lambang usu.png", caption=None, width=200)
+with g3:
+    st.write (" ")
+    
 st.markdown('<strong><h3 style="color:#006400;" align="center">Penerapan Convolutional Neural Network dan Evaluation Based on Distance from Average Solution dalam Sistem Cerdas Kesesuaian Frame Kacamata dengan Identifikasi Bentuk Wajah</h3></strong>', unsafe_allow_html=True)
 
 
