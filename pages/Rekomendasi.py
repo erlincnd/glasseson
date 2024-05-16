@@ -196,52 +196,31 @@ for i in test_files_aviator:
     img_aviator = os.path.join(test_path_aviator,i)
     test_img_aviator.append(img_aviator)
 
-# urutan = ['round', 'square', 'cat eye', 'aviator']
-# urutan_baru = [urutan[i] for i in ranking]
-
-# tab1, tab2 = st.tabs(["Paling Rekomendasi", "Cukup Rekomendasi"])
-# with tab1:
-#     st.write ("Frame Kacamata yang paling direkomendasikan sesuai bentuk wajah kamu : ")
-#     for i in range (2) :
-#         if urutan_baru[i] == 'round' : 
-#          st.image(test_img_round[1], caption='Round', width=150)
-#         elif urutan_baru[i] == 'square' :
-#           st.image(test_img_square[1], caption='Square', width=150)
-#         elif urutan_baru[i] == 'cat eye' :
-#           st.image(test_img_cateye[1], caption='Cat Eye', width=150)
-#         elif urutan_baru[i] == 'aviator' :
-#           st.image(test_img_aviator[1], caption='Aviator', width=150)
-
-# with tab2:
-#     st.write ("Frame Kacamata yang cukup direkomendasikan sesuai bentuk wajah kamu : ")
-#     for i in range (2,4) :
-#         if urutan_baru[i] == 'round' : 
-#          st.image(test_img_round[1], caption='Round', width=150)
-#         elif urutan_baru[i] == 'square' :
-#           st.image(test_img_square[1], caption='Square', width=150)
-#         elif urutan_baru[i] == 'cat eye' :
-#           st.image(test_img_cateye[1], caption='Cat Eye', width=150)
-#         elif urutan_baru[i] == 'aviator' :
-#           st.image(test_img_aviator[1], caption='Aviator', width=150)
-
 urutan = ['round', 'square', 'cat eye', 'aviator']
 urutan_baru = [urutan[i] for i in ranking]
 
-st.write ("Frame Kacamata yang paling direkomendasikan sesuai bentuk wajah kamu : ")
-for i in range(2):
-    if urutan_baru[i] == 'round':
-        st.write("Round")
-        for img in test_img_round[:3]:  # Menampilkan 3 gambar round
-            st.image(img, caption='Round', width=150)
-    elif urutan_baru[i] == 'square':
-        st.write("Square")
-        for img in test_img_square[:3]:  # Menampilkan 3 gambar square
-            st.image(img, caption='Square', width=150)
-    elif urutan_baru[i] == 'cat eye':
-        st.write("Cat Eye")
-        for img in test_img_cateye[:3]:  # Menampilkan 3 gambar cat eye
-            st.image(img, caption='Cat Eye', width=150)
-    elif urutan_baru[i] == 'aviator':
-        st.write("Aviator")
-        for img in test_img_aviator[:3]:  # Menampilkan 3 gambar aviator
-            st.image(img, caption='Aviator', width=150)
+tab1, tab2 = st.tabs(["Paling Rekomendasi", "Cukup Rekomendasi"])
+with tab1:
+    st.write ("Frame Kacamata yang paling direkomendasikan sesuai bentuk wajah kamu : ")
+    for i in range (2) :
+        if urutan_baru[i] == 'round' : 
+         st.image(test_img_round[1], caption='Round', width=150)
+        elif urutan_baru[i] == 'square' :
+          st.image(test_img_square[1], caption='Square', width=150)
+        elif urutan_baru[i] == 'cat eye' :
+          st.image(test_img_cateye[1], caption='Cat Eye', width=150)
+        elif urutan_baru[i] == 'aviator' :
+          st.image(test_img_aviator[1], caption='Aviator', width=150)
+
+with tab2:
+    st.write ("Frame Kacamata yang cukup direkomendasikan sesuai bentuk wajah kamu : ")
+    for i in range (2,4) :
+        if urutan_baru[i] == 'round' : 
+         st.image(test_img_round[1], caption='Round', width=150)
+        elif urutan_baru[i] == 'square' :
+          st.image(test_img_square[1], caption='Square', width=150)
+        elif urutan_baru[i] == 'cat eye' :
+          st.image(test_img_cateye[1], caption='Cat Eye', width=150)
+        elif urutan_baru[i] == 'aviator' :
+          st.image(test_img_aviator[1], caption='Aviator', width=150)
+
