@@ -230,18 +230,18 @@ urutan_baru = [urutan[i] for i in ranking]
 st.write ("Frame Kacamata yang paling direkomendasikan sesuai bentuk wajah kamu : ")
 for i in range(2):
     if urutan_baru[i] == 'round':
-        st.write("*Round*")
+        st.write("Round")
         for img in test_img_round[:3]:  # Menampilkan 3 gambar round
             st.image(img, caption='Round', width=150)
     elif urutan_baru[i] == 'square':
-        st.write("*Square*")
+        st.write("Square")
         for img in test_img_square[:3]:  # Menampilkan 3 gambar square
             st.image(img, caption='Square', width=150)
     elif urutan_baru[i] == 'cat eye':
-        st.write("*Cat Eye*")
+        st.write("Cat Eye")
         for img in test_img_cateye[:3]:  # Menampilkan 3 gambar cat eye
             st.image(img, caption='Cat Eye', width=150)
     elif urutan_baru[i] == 'aviator':
-        st.write("*Aviator*")
+        st.write("Aviator")
         for img in test_img_aviator[:3]:  # Menampilkan 3 gambar aviator
             st.image(img, caption='Aviator', width=150)
