@@ -14,7 +14,7 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
     
     # Menampilkan gambar
-    st.image(image, caption='Gambar yang diunggah', use_column_width=True)
+    st.image(image, caption='Gambar yang diunggah', width=200)
 
     # Menampilkan informasi tentang gambar
     st.write("Format gambar:", image.format)
