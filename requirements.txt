@@ -6,3 +6,4 @@ pip
 opencv-python-headless
 tensorflow
 protobuf
+mtcnn
