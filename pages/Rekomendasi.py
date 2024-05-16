@@ -24,7 +24,8 @@ with c2:
     st.write ("Jenis Kelamin: ", st.session_state['jeniskelamin'])
     st.write ("Tinggi Minus: ", st.session_state['tinggimin'])
     st.write ("Penggunaan: ", st.session_state['penggunaan'])
-    st.write ("")
+    if st.button("Kembali ke Menu utama"):
+       st.switch_page("main.py")
 
 wajah = st.session_state['bentuk']
 jeniskelamin = st.session_state['jeniskelamin']
