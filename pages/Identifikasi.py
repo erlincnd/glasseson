@@ -14,7 +14,7 @@ detector = MTCNN()  # creates detector
 st.title("Glasses On")
 st.image('logo glasses-on 2.png', caption=None, width=200, )
 if 'my_image' in st.session_state:
-    st.image(st.session_state['my_image'])
+    st.image(st.session_state['my_image'], width=200)
 
 model = load_model('converted_model.h5')
 
