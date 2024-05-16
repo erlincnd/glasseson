@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import io
 
+st.set_page_config(page_title="Glasses On", page_icon="👓")
 st.title("Glasses On")
 st.image('logo glasses-on 2.png', caption=None, width=300, )
 st.write ("Input gambar wajah dengan ketentuan sebagai berikut :")
