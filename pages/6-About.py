@@ -1,5 +1,6 @@
 import streamlit as st
 
+st.set_page_config(page_title="Glasses On", page_icon="👓")
 st.title("Glasses On")
 st.image('logo glasses-on 2.png', caption=None, width=300, )
 
