@@ -4,5 +4,5 @@ streamlit
 scikit-learn
 pip==22.2.2
 opencv-python-headless
-tensorflow==2.11.0
-protobuf==3.20.1
+tensorflow
+protobuf
