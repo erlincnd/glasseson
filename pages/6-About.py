@@ -24,3 +24,6 @@ with c3:
     st.markdown('<strong><p style="color:green;">Dosen Pembimbing II.</p></strong>', unsafe_allow_html=True)
     st.write ("Dr. Ir. Elviawaty Muisa Zamzami S.T., M.T., MM")
     st.write ("NIP 197007162005012002")
+
+if st.button("Kembali ke Menu utama"):
+    st.switch_page("main.py")
