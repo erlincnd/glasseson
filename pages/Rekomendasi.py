@@ -12,14 +12,19 @@ import pickle
 from mtcnn.mtcnn import MTCNN
 
 st.title("Glasses On")
-st.image('logo glasses-on 2.png', caption=None, width=200, )
-if 'my_image' in st.session_state:
-    st.image(st.session_state['my_image'], width=300)
-st.write ("Bentuk Wajah: ", st.session_state['bentuk'])
-st.write ("Jenis Kelamin: ", st.session_state['jeniskelamin'])
-st.write ("Tinggi Minus: ", st.session_state['tinggimin'])
-st.write ("Penggunaan: ", st.session_state['penggunaan'])
-st.write ("")
+c1,c2 = st.columns(2)
+
+with c1:
+    with st.container() :
+        if 'my_image' in st.session_state:
+          st.image(st.session_state['my_image'], width=200)
+
+with c2:
+    st.write ("Bentuk Wajah: ", st.session_state['bentuk'])
+    st.write ("Jenis Kelamin: ", st.session_state['jeniskelamin'])
+    st.write ("Tinggi Minus: ", st.session_state['tinggimin'])
+    st.write ("Penggunaan: ", st.session_state['penggunaan'])
+    st.write ("")
 
 wajah = st.session_state['bentuk']
 jeniskelamin = st.session_state['jeniskelamin']
@@ -193,24 +198,27 @@ for i in test_files_aviator:
 urutan = ['round', 'square', 'cat eye', 'aviator']
 urutan_baru = [urutan[i] for i in ranking]
 
-st.write ("Frame Kacamata yang paling direkomendasikan sesuai bentuk wajah kamu : ")
-for i in range (2) :
-    if urutan_baru[i] == 'round' : 
-      st.image(test_img_round[1], caption='Round', width=150)
-    elif urutan_baru[i] == 'square' :
-      st.image(test_img_square[1], caption='Square', width=150)
-    elif urutan_baru[i] == 'cat eye' :
-      st.image(test_img_cateye[1], caption='Cat Eye', width=150)
-    elif urutan_baru[i] == 'aviator' :
-      st.image(test_img_aviator[1], caption='Aviator', width=150)
+tab1, tab2 = st.tabs(["Paling Rekomendasi", "Cukup Rekomendasi"])
+with tab1:
+    st.write ("Frame Kacamata yang paling direkomendasikan sesuai bentuk wajah kamu : ")
+    for i in range (2) :
+        if urutan_baru[i] == 'round' : 
+         st.image(test_img_round[1], caption='Round', width=150)
+        elif urutan_baru[i] == 'square' :
+          st.image(test_img_square[1], caption='Square', width=150)
+        elif urutan_baru[i] == 'cat eye' :
+          st.image(test_img_cateye[1], caption='Cat Eye', width=150)
+        elif urutan_baru[i] == 'aviator' :
+          st.image(test_img_aviator[1], caption='Aviator', width=150)
 
-st.write ("Frame Kacamata yang cukup direkomendasikan sesuai bentuk wajah kamu : ")
-for i in range (2,4) :
-    if urutan_baru[i] == 'round' : 
-      st.image(test_img_round[1], caption='Round', width=150)
-    elif urutan_baru[i] == 'square' :
-      st.image(test_img_square[1], caption='Square', width=150)
-    elif urutan_baru[i] == 'cat eye' :
-      st.image(test_img_cateye[1], caption='Cat Eye', width=150)
-    elif urutan_baru[i] == 'aviator' :
-      st.image(test_img_aviator[1], caption='Aviator', width=150)
+with tab2:
+    st.write ("Frame Kacamata yang cukup direkomendasikan sesuai bentuk wajah kamu : ")
+    for i in range (2,4) :
+        if urutan_baru[i] == 'round' : 
+         st.image(test_img_round[1], caption='Round', width=150)
+        elif urutan_baru[i] == 'square' :
+          st.image(test_img_square[1], caption='Square', width=150)
+        elif urutan_baru[i] == 'cat eye' :
+          st.image(test_img_cateye[1], caption='Cat Eye', width=150)
+        elif urutan_baru[i] == 'aviator' :
+          st.image(test_img_aviator[1], caption='Aviator', width=150)
