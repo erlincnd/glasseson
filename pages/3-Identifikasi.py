@@ -11,6 +11,7 @@ from mtcnn.mtcnn import MTCNN
 
 detector = MTCNN()  # creates detector
 
+st.set_page_config(page_title="Glasses On", page_icon="👓")
 st.title("Glasses On")
 st.image('logo glasses-on 2.png', caption=None, width=200, )
 if 'my_image' in st.session_state:
