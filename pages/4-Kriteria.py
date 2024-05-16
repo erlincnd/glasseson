@@ -26,5 +26,5 @@ penggunaan = st.selectbox(
 st.session_state['penggunaan']=penggunaan
 
 if st.button("Lihat Rekomendasi Frame Kacamata"):
-    st.switch_page("pages/Rekomendasi.py")
+    st.switch_page("pages/5-Rekomendasi.py")
     
