@@ -12,6 +12,8 @@ import pickle
 from mtcnn.mtcnn import MTCNN
 
 st.title("Glasses On")
+st.image('logo glasses-on 2.png', caption=None, width=200, )
+
 c1,c2 = st.columns(2)
 
 with c1:
@@ -31,6 +33,8 @@ wajah = st.session_state['bentuk']
 jeniskelamin = st.session_state['jeniskelamin']
 tinggimin = st.session_state['tinggimin']
 penggunaan = st.session_state['penggunaan']
+
+
 
 def rata(matriks):
     return np.mean(matriks, axis=0)
@@ -160,7 +164,7 @@ def rank(skoring) :
 ranking = rank(skoring)
 print("ranking = ", ranking)
 
-test_path_round = 'Eyeglasses Dataset/Round'
+test_path_round = 'D:\kuliah\skripsi\glasses on\Eyeglasses Dataset\Round'
 test_files_round = os.listdir(test_path_round)
 
 test_img_round = []
@@ -169,7 +173,7 @@ for i in test_files_round:
     img_round = os.path.join(test_path_round,i)
     test_img_round.append(img_round)
 
-test_path_square = 'Eyeglasses Dataset/Square'
+test_path_square = 'D:\kuliah\skripsi\glasses on\Eyeglasses Dataset\Square'
 test_files_square = os.listdir(test_path_square)
 
 test_img_square = []
@@ -178,7 +182,7 @@ for i in test_files_square:
     img_square = os.path.join(test_path_square,i)
     test_img_square.append(img_square)
 
-test_path_cateye = 'Eyeglasses Dataset/Cat Eye'
+test_path_cateye = 'D:\kuliah\skripsi\glasses on\Eyeglasses Dataset\Cat Eye'
 test_files_cateye = os.listdir(test_path_cateye)
 
 test_img_cateye = []
@@ -187,7 +191,7 @@ for i in test_files_cateye:
     img_cateye = os.path.join(test_path_cateye,i)
     test_img_cateye.append(img_cateye)
 
-test_path_aviator = 'Eyeglasses Dataset/Aviator'
+test_path_aviator = 'D:\kuliah\skripsi\glasses on\Eyeglasses Dataset\Aviator'
 test_files_aviator = os.listdir(test_path_aviator)
 
 test_img_aviator = []
@@ -196,31 +200,35 @@ for i in test_files_aviator:
     img_aviator = os.path.join(test_path_aviator,i)
     test_img_aviator.append(img_aviator)
 
+
 urutan = ['round', 'square', 'cat eye', 'aviator']
 urutan_baru = [urutan[i] for i in ranking]
 
-tab1, tab2 = st.tabs(["Paling Rekomendasi", "Cukup Rekomendasi"])
-with tab1:
-    st.write ("Frame Kacamata yang paling direkomendasikan sesuai bentuk wajah kamu : ")
-    for i in range (2) :
-        if urutan_baru[i] == 'round' : 
-         st.image(test_img_round[1], caption='Round', width=150)
-        elif urutan_baru[i] == 'square' :
-          st.image(test_img_square[1], caption='Square', width=150)
-        elif urutan_baru[i] == 'cat eye' :
-          st.image(test_img_cateye[1], caption='Cat Eye', width=150)
-        elif urutan_baru[i] == 'aviator' :
-          st.image(test_img_aviator[1], caption='Aviator', width=150)
+st.write("Frame Kacamata yang paling direkomendasikan sesuai bentuk wajah kamu : ")
 
-with tab2:
-    st.write ("Frame Kacamata yang cukup direkomendasikan sesuai bentuk wajah kamu : ")
-    for i in range (2,4) :
-        if urutan_baru[i] == 'round' : 
-         st.image(test_img_round[1], caption='Round', width=150)
-        elif urutan_baru[i] == 'square' :
-          st.image(test_img_square[1], caption='Square', width=150)
-        elif urutan_baru[i] == 'cat eye' :
-          st.image(test_img_cateye[1], caption='Cat Eye', width=150)
-        elif urutan_baru[i] == 'aviator' :
-          st.image(test_img_aviator[1], caption='Aviator', width=150)
 
+for i in range(4):
+  if urutan_baru[i] == 'round':
+    st.write("Round")
+    r1 = st.columns(4)
+    for j in range(4-i):
+        with r1[j]:
+          st.image(test_img_round[j], caption='Round', width=150)
+  elif urutan_baru[i] == 'square':
+    st.write("Square")
+    r2 = st.columns(4)
+    for j in range(4-i):
+        with r2[j]:
+          st.image(test_img_square[j], caption='Square', width=150)
+  elif urutan_baru[i] == 'cat eye':
+      st.write("Cat Eye")
+      r3 = st.columns(4)
+      for j in range(4-i):
+        with r3[j]:
+          st.image(test_img_cateye[j], caption='Cat Eye', width=150)
+  elif urutan_baru[i] == 'aviator':
+    st.write("Aviator")
+    r4 = st.columns(4)
+    for j in range(4-i):
+        with r4[j]:
+          st.image(test_img_aviator[j], caption='Aviator', width=150)
