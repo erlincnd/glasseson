@@ -129,6 +129,9 @@ def predict_face_shape(img_array):
     except Exception as e:
         st.write("Tidak terdeteksi")
 
+if 'my_image' not in st.session_state:
+    st.session_state['my_image'] = None
+image = st.session_state.my_image
 bentuk = predict_face_shape(st.session_state['my_image'])
 st.session_state['bentuk'] = bentuk
 st.write ("Bentuk wajah kamu adalah ", bentuk)
