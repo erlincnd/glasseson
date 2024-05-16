@@ -8,3 +8,4 @@ tensorflow
 protobuf
 mtcnn
 matplotlib
+opencv-python
