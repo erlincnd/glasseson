@@ -136,4 +136,4 @@ bentuk = predict_face_shape(st.session_state['my_image'])
 st.session_state['bentuk'] = bentuk
 st.write ("Bentuk wajah kamu adalah ", bentuk)
 if st.button("Lanjutkan"):
-    st.switch_page("pages/Kriteria.py")
+    st.switch_page("pages/4-Kriteria.py")
